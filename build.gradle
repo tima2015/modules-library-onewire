@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.funnydwarf.iot.ml'
+version '0.2-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    implementation 'com.github.tima2015:modules-library:v0.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+}
+
+test {
+    useJUnitPlatform()
+}
