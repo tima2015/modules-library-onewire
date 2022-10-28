@@ -2,17 +2,20 @@ package ru.funnydwarf.iot.ml;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 
-public class OneWireModuleGroup extends ModuleGroup{
+@Component
+public class OneWireModuleGroup extends ModuleGroup {
 
     private static final Logger log = LoggerFactory.getLogger(OneWireModuleGroup.class);
 
     public static final String PATH = "/sys/bus/w1/devices";
 
-    public OneWireModuleGroup(String name, String description) {
-        super(name, description);
+    public OneWireModuleGroup() {
+        super("OneWire", "Интерфейс разработанный компанией Dallas Semiconductor." +
+                "Для передачи данных используется один провод");
     }
 
     @Override
