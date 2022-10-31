@@ -13,7 +13,7 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot:2.7.5'
     implementation 'org.slf4j:slf4j-api:2.0.3'
-    implementation 'com.github.tima2015:modules-library:v0.2.1'
+    implementation 'com.github.tima2015:modules-library:v0.2.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
 }

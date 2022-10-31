@@ -19,12 +19,12 @@ public class OneWireModuleGroup extends ModuleGroup {
     }
 
     @Override
-    protected State initialize() throws Exception {
+    protected InitializationState initialize() throws Exception {
         File oneWireDriverDir = new File(PATH);
         if (!oneWireDriverDir.exists() || !oneWireDriverDir.isDirectory()) {
             log.warn("Driver folder was not found! Driver not initialized!");
-            return State.INITIALIZATION_ERROR;
+            return InitializationState.INITIALIZATION_ERROR;
         }
-        return State.OK;
+        return InitializationState.OK;
     }
 }
